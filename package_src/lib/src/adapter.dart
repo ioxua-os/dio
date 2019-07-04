@@ -158,7 +158,7 @@ class DefaultHttpClientAdapter extends HttpClientAdapter {
       );
     }
     return ResponseBody(
-      responseStream,
+      responseStream as Stream<Uint8List>,
       responseStream.statusCode,
       headers: responseStream.headers,
       redirects: responseStream.redirects,
